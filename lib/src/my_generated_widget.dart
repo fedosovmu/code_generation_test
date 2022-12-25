@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-part 'my_generated_widget.g.dart';
-
-class MyGeneratedWidget extends $MyGeneratedWidget {
+class MyGeneratedWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text('sdsd');
+  }
 }

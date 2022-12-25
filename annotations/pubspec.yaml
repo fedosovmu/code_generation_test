@@ -1,0 +1,10 @@
+name: annotations
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
