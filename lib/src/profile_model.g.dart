@@ -3,31 +3,19 @@
 part of 'profile_model.dart';
 
 // **************************************************************************
-// SubclassGenerator
+// ExtensionGenerator
 // **************************************************************************
 
-class ProfileModelGen extends ProfileModel {
-  Map<String, dynamic> variables = {};
-  ProfileModelGen() {
-    variables['name'] = super._name;
-    variables['age'] = super._age;
-    variables['codes'] = super._codes;
-  }
+extension GeneratedModel on ProfileModel {
+  Map<String, dynamic> get variables => {
+        'name': _name,
+        'age': _age,
+        'codes': _codes,
+      };
   String get name => variables['name'];
-  set name(String name) {
-    super._name = name;
-    variables['name'] = name;
-  }
-
+  set name(String name) => _name = name;
   int get age => variables['age'];
-  set age(int age) {
-    super._age = age;
-    variables['age'] = age;
-  }
-
+  set age(int age) => _age = age;
   bool get codes => variables['codes'];
-  set codes(bool codes) {
-    super._codes = codes;
-    variables['codes'] = codes;
-  }
+  set codes(bool codes) => _codes = codes;
 }

@@ -2,7 +2,7 @@ import 'package:annotations/annotations.dart';
 
 part 'profile_model.g.dart';
 
-@generateSubclass
+@generateExtension
 class ProfileModel {
   String _name = 'Aachman';
   int _age = 20;
