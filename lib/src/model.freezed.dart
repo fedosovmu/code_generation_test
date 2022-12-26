@@ -18,6 +18,11 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$TestModel {
   int? get value => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
+  int? get field1 => throw _privateConstructorUsedError;
+  @JsonKey(name: 'field_2', defaultValue: 123)
+  int? get field2 => throw _privateConstructorUsedError;
+  @JsonKey(name: 'field_3')
+  int? get field3 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TestModelCopyWith<TestModel> get copyWith =>
@@ -29,7 +34,12 @@ abstract class $TestModelCopyWith<$Res> {
   factory $TestModelCopyWith(TestModel value, $Res Function(TestModel) then) =
       _$TestModelCopyWithImpl<$Res, TestModel>;
   @useResult
-  $Res call({int? value, String? name});
+  $Res call(
+      {int? value,
+      String? name,
+      int? field1,
+      @JsonKey(name: 'field_2', defaultValue: 123) int? field2,
+      @JsonKey(name: 'field_3') int? field3});
 }
 
 /// @nodoc
@@ -47,6 +57,9 @@ class _$TestModelCopyWithImpl<$Res, $Val extends TestModel>
   $Res call({
     Object? value = freezed,
     Object? name = freezed,
+    Object? field1 = freezed,
+    Object? field2 = freezed,
+    Object? field3 = freezed,
   }) {
     return _then(_value.copyWith(
       value: freezed == value
@@ -57,6 +70,18 @@ class _$TestModelCopyWithImpl<$Res, $Val extends TestModel>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
+      field1: freezed == field1
+          ? _value.field1
+          : field1 // ignore: cast_nullable_to_non_nullable
+              as int?,
+      field2: freezed == field2
+          ? _value.field2
+          : field2 // ignore: cast_nullable_to_non_nullable
+              as int?,
+      field3: freezed == field3
+          ? _value.field3
+          : field3 // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -68,7 +93,12 @@ abstract class _$$_TestModelCopyWith<$Res> implements $TestModelCopyWith<$Res> {
       __$$_TestModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? value, String? name});
+  $Res call(
+      {int? value,
+      String? name,
+      int? field1,
+      @JsonKey(name: 'field_2', defaultValue: 123) int? field2,
+      @JsonKey(name: 'field_3') int? field3});
 }
 
 /// @nodoc
@@ -84,6 +114,9 @@ class __$$_TestModelCopyWithImpl<$Res>
   $Res call({
     Object? value = freezed,
     Object? name = freezed,
+    Object? field1 = freezed,
+    Object? field2 = freezed,
+    Object? field3 = freezed,
   }) {
     return _then(_$_TestModel(
       value: freezed == value
@@ -94,6 +127,18 @@ class __$$_TestModelCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
+      field1: freezed == field1
+          ? _value.field1
+          : field1 // ignore: cast_nullable_to_non_nullable
+              as int?,
+      field2: freezed == field2
+          ? _value.field2
+          : field2 // ignore: cast_nullable_to_non_nullable
+              as int?,
+      field3: freezed == field3
+          ? _value.field3
+          : field3 // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -101,16 +146,30 @@ class __$$_TestModelCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TestModel implements _TestModel {
-  const _$_TestModel({this.value, this.name});
+  const _$_TestModel(
+      {this.value,
+      this.name,
+      this.field1 = 3,
+      @JsonKey(name: 'field_2', defaultValue: 123) this.field2,
+      @JsonKey(name: 'field_3') this.field3});
 
   @override
   final int? value;
   @override
   final String? name;
+  @override
+  @JsonKey()
+  final int? field1;
+  @override
+  @JsonKey(name: 'field_2', defaultValue: 123)
+  final int? field2;
+  @override
+  @JsonKey(name: 'field_3')
+  final int? field3;
 
   @override
   String toString() {
-    return 'TestModel(value: $value, name: $name)';
+    return 'TestModel(value: $value, name: $name, field1: $field1, field2: $field2, field3: $field3)';
   }
 
   @override
@@ -119,11 +178,15 @@ class _$_TestModel implements _TestModel {
         (other.runtimeType == runtimeType &&
             other is _$_TestModel &&
             (identical(other.value, value) || other.value == value) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.field1, field1) || other.field1 == field1) &&
+            (identical(other.field2, field2) || other.field2 == field2) &&
+            (identical(other.field3, field3) || other.field3 == field3));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, value, name);
+  int get hashCode =>
+      Object.hash(runtimeType, value, name, field1, field2, field3);
 
   @JsonKey(ignore: true)
   @override
@@ -133,13 +196,25 @@ class _$_TestModel implements _TestModel {
 }
 
 abstract class _TestModel implements TestModel {
-  const factory _TestModel({final int? value, final String? name}) =
-      _$_TestModel;
+  const factory _TestModel(
+      {final int? value,
+      final String? name,
+      final int? field1,
+      @JsonKey(name: 'field_2', defaultValue: 123) final int? field2,
+      @JsonKey(name: 'field_3') final int? field3}) = _$_TestModel;
 
   @override
   int? get value;
   @override
   String? get name;
+  @override
+  int? get field1;
+  @override
+  @JsonKey(name: 'field_2', defaultValue: 123)
+  int? get field2;
+  @override
+  @JsonKey(name: 'field_3')
+  int? get field3;
   @override
   @JsonKey(ignore: true)
   _$$_TestModelCopyWith<_$_TestModel> get copyWith =>

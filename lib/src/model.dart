@@ -8,12 +8,12 @@ class TestModel with _$TestModel {
   const factory TestModel({
     int? value,
     String? name,
-    // @Default(3)
-    // int? field1,
-    // @JsonKey(name: 'field_2', defaultValue: 123)
-    // int? field2,
-    // @JsonKey(name: 'field_3')
-    // int? field3,
+    @Default(3)
+    int? field1,
+    @JsonKey(name: 'field_2', defaultValue: 123)
+    int? field2,
+    @JsonKey(name: 'field_3')
+    int? field3,
   }) = _TestModel;
 
   //factory TestModel.fromJson(Map<String, dynamic> json) =>
