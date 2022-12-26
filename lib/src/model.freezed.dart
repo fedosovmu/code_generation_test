@@ -19,7 +19,7 @@ mixin _$TestModel {
   int? get value => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   int? get field1 => throw _privateConstructorUsedError;
-  @JsonKey(name: 'field_2', defaultValue: 123)
+  @JsonKey(name: 'fieldm_2', defaultValue: 123)
   int? get field2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'field_3')
   int? get field3 => throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ abstract class $TestModelCopyWith<$Res> {
       {int? value,
       String? name,
       int? field1,
-      @JsonKey(name: 'field_2', defaultValue: 123) int? field2,
+      @JsonKey(name: 'fieldm_2', defaultValue: 123) int? field2,
       @JsonKey(name: 'field_3') int? field3});
 }
 
@@ -97,7 +97,7 @@ abstract class _$$_TestModelCopyWith<$Res> implements $TestModelCopyWith<$Res> {
       {int? value,
       String? name,
       int? field1,
-      @JsonKey(name: 'field_2', defaultValue: 123) int? field2,
+      @JsonKey(name: 'fieldm_2', defaultValue: 123) int? field2,
       @JsonKey(name: 'field_3') int? field3});
 }
 
@@ -150,7 +150,7 @@ class _$_TestModel implements _TestModel {
       {this.value,
       this.name,
       this.field1 = 3,
-      @JsonKey(name: 'field_2', defaultValue: 123) this.field2,
+      @JsonKey(name: 'fieldm_2', defaultValue: 123) this.field2,
       @JsonKey(name: 'field_3') this.field3});
 
   @override
@@ -161,7 +161,7 @@ class _$_TestModel implements _TestModel {
   @JsonKey()
   final int? field1;
   @override
-  @JsonKey(name: 'field_2', defaultValue: 123)
+  @JsonKey(name: 'fieldm_2', defaultValue: 123)
   final int? field2;
   @override
   @JsonKey(name: 'field_3')
@@ -200,7 +200,7 @@ abstract class _TestModel implements TestModel {
       {final int? value,
       final String? name,
       final int? field1,
-      @JsonKey(name: 'field_2', defaultValue: 123) final int? field2,
+      @JsonKey(name: 'fieldm_2', defaultValue: 123) final int? field2,
       @JsonKey(name: 'field_3') final int? field3}) = _$_TestModel;
 
   @override
@@ -210,7 +210,7 @@ abstract class _TestModel implements TestModel {
   @override
   int? get field1;
   @override
-  @JsonKey(name: 'field_2', defaultValue: 123)
+  @JsonKey(name: 'fieldm_2', defaultValue: 123)
   int? get field2;
   @override
   @JsonKey(name: 'field_3')
