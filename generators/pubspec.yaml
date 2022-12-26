@@ -10,6 +10,7 @@ dependencies:
     sdk: flutter
   build:
   source_gen:
+  analyzer:
   annotations:
     path: ../annotations/
 

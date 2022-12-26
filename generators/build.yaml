@@ -7,7 +7,7 @@ targets:
 builders:
   widget_builder:
     import: "package:generators/builder.dart"
-    builder_factories: ["generateSubclass", "generateExtension"]
+    builder_factories: ["defaultValuesChecker"]
     build_extensions: {".dart": [".g.part"]}
     auto_apply: dependents
     build_to: cache
