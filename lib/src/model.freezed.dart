@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$TestModel {
   int? get value => throw _privateConstructorUsedError;
+  @JsonKey(name: 'name', defaultValue: 'Alex')
   String? get name => throw _privateConstructorUsedError;
   int? get field1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'fieldm_2', defaultValue: 123)
@@ -36,7 +37,7 @@ abstract class $TestModelCopyWith<$Res> {
   @useResult
   $Res call(
       {int? value,
-      String? name,
+      @JsonKey(name: 'name', defaultValue: 'Alex') String? name,
       int? field1,
       @JsonKey(name: 'fieldm_2', defaultValue: 123) int? field2,
       @JsonKey(name: 'field_3') int? field3});
@@ -95,7 +96,7 @@ abstract class _$$_TestModelCopyWith<$Res> implements $TestModelCopyWith<$Res> {
   @useResult
   $Res call(
       {int? value,
-      String? name,
+      @JsonKey(name: 'name', defaultValue: 'Alex') String? name,
       int? field1,
       @JsonKey(name: 'fieldm_2', defaultValue: 123) int? field2,
       @JsonKey(name: 'field_3') int? field3});
@@ -148,7 +149,7 @@ class __$$_TestModelCopyWithImpl<$Res>
 class _$_TestModel implements _TestModel {
   const _$_TestModel(
       {this.value,
-      this.name,
+      @JsonKey(name: 'name', defaultValue: 'Alex') this.name = 'Alex',
       this.field1 = 3,
       @JsonKey(name: 'fieldm_2', defaultValue: 123) this.field2,
       @JsonKey(name: 'field_3') this.field3});
@@ -156,6 +157,7 @@ class _$_TestModel implements _TestModel {
   @override
   final int? value;
   @override
+  @JsonKey(name: 'name', defaultValue: 'Alex')
   final String? name;
   @override
   @JsonKey()
@@ -198,7 +200,7 @@ class _$_TestModel implements _TestModel {
 abstract class _TestModel implements TestModel {
   const factory _TestModel(
       {final int? value,
-      final String? name,
+      @JsonKey(name: 'name', defaultValue: 'Alex') final String? name,
       final int? field1,
       @JsonKey(name: 'fieldm_2', defaultValue: 123) final int? field2,
       @JsonKey(name: 'field_3') final int? field3}) = _$_TestModel;
@@ -206,6 +208,7 @@ abstract class _TestModel implements TestModel {
   @override
   int? get value;
   @override
+  @JsonKey(name: 'name', defaultValue: 'Alex')
   String? get name;
   @override
   int? get field1;

@@ -16,7 +16,7 @@ packages:
     source: hosted
     version: "5.2.0"
   annotations:
-    dependency: "direct main"
+    dependency: transitive
     description:
       path: annotations
       relative: true

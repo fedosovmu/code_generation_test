@@ -7,6 +7,8 @@ part 'model.freezed.dart';
 class TestModel with _$TestModel {
   const factory TestModel({
     int? value,
+    @Default('Alex')
+    @JsonKey(name: 'name', defaultValue: 'Alex')
     String? name,
     @Default(3)
     int? field1,

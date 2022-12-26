@@ -1,39 +1,28 @@
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/visitor.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 class DefaultValuesCheckerVisitor extends SimpleElementVisitor<void> {
   @override
   void visitConstructorElement(ConstructorElement element) {
-    final type = element.type.returnType.toString();
-    print('========== visit Constructor: $type');
-    final children = element.children.toList();
-    for (var child in children) {
+    for (var child in element.children) {
       final metadata = child.metadata;
-      print('===== child: ${child.name}');
+      bool hasDefaultValue = false;
       for (var meta in metadata) {
-        print('=== meta: $meta');
         final constValue = meta.computeConstantValue();
-        print('=== constValue: $constValue');
         final type = constValue?.type;
-        print('=== type: ${type}');
-        final isDefault = type.toString() == 'Default';
         final isJsonKey = type.toString() == 'JsonKey';
-        print('=== isDefault: $isDefault');
-        print('=== isJsonKey: $isJsonKey');
-        if (isDefault) {
+        final isDefault = type.toString() == 'Default';
+        if (isJsonKey) {
           final defaultValue = constValue?.getField('defaultValue');
-          print('== defaultValue: $defaultValue');
           if (defaultValue?.isNull ?? false) {
-            print('============== defaultValue null');
+            print('[ERROR] Field "${child.name}" @JsonKey annotation has no defaultValue');
           }
-        } else if (isJsonKey) {
-          final defaultValue = constValue?.getField('defaultValue');
-          print('== defaultValue: $defaultValue');
-          if (defaultValue?.isNull ?? false) {
-            print('============== defaultValue null');
-          }
+        } else if (isDefault) {
+          hasDefaultValue = true;
         }
+      }
+      if (!hasDefaultValue) {
+        print('[ERROR] Field "${child.name}" has no @Default annotation');
       }
     }
     super.visitConstructorElement(element);
