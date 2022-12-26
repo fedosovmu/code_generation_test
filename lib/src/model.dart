@@ -12,7 +12,7 @@ class TestModel with _$TestModel {
     int? field1,
     @JsonKey(name: 'field_2', defaultValue: 123)
     int? field2,
-    @JsonKey(name: 'field_3')
+    @JsonKey(name: 'field_6')
     int? field3,
   }) = _TestModel;
 
