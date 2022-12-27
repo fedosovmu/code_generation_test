@@ -11,8 +11,6 @@ dependencies:
   build:
   source_gen:
   analyzer:
-  annotations:
-    path: ../annotations/
   freezed_annotation:
 
 dev_dependencies:

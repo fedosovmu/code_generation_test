@@ -22,8 +22,8 @@ mixin _$TestModel {
   int? get field1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'fieldm_2', defaultValue: 123)
   int? get field2 => throw _privateConstructorUsedError;
-  @JsonKey(name: 'field_3')
-  int? get field3 => throw _privateConstructorUsedError;
+  @JsonKey(name: 'field_4')
+  int? get field4 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TestModelCopyWith<TestModel> get copyWith =>
@@ -40,7 +40,7 @@ abstract class $TestModelCopyWith<$Res> {
       @JsonKey(name: 'name', defaultValue: 'Alex') String? name,
       int? field1,
       @JsonKey(name: 'fieldm_2', defaultValue: 123) int? field2,
-      @JsonKey(name: 'field_3') int? field3});
+      @JsonKey(name: 'field_4') int? field4});
 }
 
 /// @nodoc
@@ -60,7 +60,7 @@ class _$TestModelCopyWithImpl<$Res, $Val extends TestModel>
     Object? name = freezed,
     Object? field1 = freezed,
     Object? field2 = freezed,
-    Object? field3 = freezed,
+    Object? field4 = freezed,
   }) {
     return _then(_value.copyWith(
       value: freezed == value
@@ -79,9 +79,9 @@ class _$TestModelCopyWithImpl<$Res, $Val extends TestModel>
           ? _value.field2
           : field2 // ignore: cast_nullable_to_non_nullable
               as int?,
-      field3: freezed == field3
-          ? _value.field3
-          : field3 // ignore: cast_nullable_to_non_nullable
+      field4: freezed == field4
+          ? _value.field4
+          : field4 // ignore: cast_nullable_to_non_nullable
               as int?,
     ) as $Val);
   }
@@ -99,7 +99,7 @@ abstract class _$$_TestModelCopyWith<$Res> implements $TestModelCopyWith<$Res> {
       @JsonKey(name: 'name', defaultValue: 'Alex') String? name,
       int? field1,
       @JsonKey(name: 'fieldm_2', defaultValue: 123) int? field2,
-      @JsonKey(name: 'field_3') int? field3});
+      @JsonKey(name: 'field_4') int? field4});
 }
 
 /// @nodoc
@@ -117,7 +117,7 @@ class __$$_TestModelCopyWithImpl<$Res>
     Object? name = freezed,
     Object? field1 = freezed,
     Object? field2 = freezed,
-    Object? field3 = freezed,
+    Object? field4 = freezed,
   }) {
     return _then(_$_TestModel(
       value: freezed == value
@@ -136,9 +136,9 @@ class __$$_TestModelCopyWithImpl<$Res>
           ? _value.field2
           : field2 // ignore: cast_nullable_to_non_nullable
               as int?,
-      field3: freezed == field3
-          ? _value.field3
-          : field3 // ignore: cast_nullable_to_non_nullable
+      field4: freezed == field4
+          ? _value.field4
+          : field4 // ignore: cast_nullable_to_non_nullable
               as int?,
     ));
   }
@@ -152,7 +152,7 @@ class _$_TestModel implements _TestModel {
       @JsonKey(name: 'name', defaultValue: 'Alex') this.name = 'Alex',
       this.field1 = 3,
       @JsonKey(name: 'fieldm_2', defaultValue: 123) this.field2,
-      @JsonKey(name: 'field_3') this.field3});
+      @JsonKey(name: 'field_4') this.field4});
 
   @override
   final int? value;
@@ -166,12 +166,12 @@ class _$_TestModel implements _TestModel {
   @JsonKey(name: 'fieldm_2', defaultValue: 123)
   final int? field2;
   @override
-  @JsonKey(name: 'field_3')
-  final int? field3;
+  @JsonKey(name: 'field_4')
+  final int? field4;
 
   @override
   String toString() {
-    return 'TestModel(value: $value, name: $name, field1: $field1, field2: $field2, field3: $field3)';
+    return 'TestModel(value: $value, name: $name, field1: $field1, field2: $field2, field4: $field4)';
   }
 
   @override
@@ -183,12 +183,12 @@ class _$_TestModel implements _TestModel {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.field1, field1) || other.field1 == field1) &&
             (identical(other.field2, field2) || other.field2 == field2) &&
-            (identical(other.field3, field3) || other.field3 == field3));
+            (identical(other.field4, field4) || other.field4 == field4));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, value, name, field1, field2, field3);
+      Object.hash(runtimeType, value, name, field1, field2, field4);
 
   @JsonKey(ignore: true)
   @override
@@ -203,7 +203,7 @@ abstract class _TestModel implements TestModel {
       @JsonKey(name: 'name', defaultValue: 'Alex') final String? name,
       final int? field1,
       @JsonKey(name: 'fieldm_2', defaultValue: 123) final int? field2,
-      @JsonKey(name: 'field_3') final int? field3}) = _$_TestModel;
+      @JsonKey(name: 'field_4') final int? field4}) = _$_TestModel;
 
   @override
   int? get value;
@@ -216,8 +216,8 @@ abstract class _TestModel implements TestModel {
   @JsonKey(name: 'fieldm_2', defaultValue: 123)
   int? get field2;
   @override
-  @JsonKey(name: 'field_3')
-  int? get field3;
+  @JsonKey(name: 'field_4')
+  int? get field4;
   @override
   @JsonKey(ignore: true)
   _$$_TestModelCopyWith<_$_TestModel> get copyWith =>
