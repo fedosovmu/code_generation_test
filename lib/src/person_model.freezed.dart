@@ -18,9 +18,9 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PersonModel {
   @JsonKey(name: 'name', defaultValue: 'Person')
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'age', defaultValue: 15)
+  @JsonKey(name: 'age')
   int get age => throw _privateConstructorUsedError;
-  String? get hobby => throw _privateConstructorUsedError;
+  String get hobby => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PersonModelCopyWith<PersonModel> get copyWith =>
@@ -35,8 +35,8 @@ abstract class $PersonModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'name', defaultValue: 'Person') String name,
-      @JsonKey(name: 'age', defaultValue: 15) int age,
-      String? hobby});
+      @JsonKey(name: 'age') int age,
+      String hobby});
 }
 
 /// @nodoc
@@ -54,7 +54,7 @@ class _$PersonModelCopyWithImpl<$Res, $Val extends PersonModel>
   $Res call({
     Object? name = null,
     Object? age = null,
-    Object? hobby = freezed,
+    Object? hobby = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -65,10 +65,10 @@ class _$PersonModelCopyWithImpl<$Res, $Val extends PersonModel>
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
-      hobby: freezed == hobby
+      hobby: null == hobby
           ? _value.hobby
           : hobby // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
@@ -83,8 +83,8 @@ abstract class _$$_PersonModelCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'name', defaultValue: 'Person') String name,
-      @JsonKey(name: 'age', defaultValue: 15) int age,
-      String? hobby});
+      @JsonKey(name: 'age') int age,
+      String hobby});
 }
 
 /// @nodoc
@@ -100,7 +100,7 @@ class __$$_PersonModelCopyWithImpl<$Res>
   $Res call({
     Object? name = null,
     Object? age = null,
-    Object? hobby = freezed,
+    Object? hobby = null,
   }) {
     return _then(_$_PersonModel(
       name: null == name
@@ -111,10 +111,10 @@ class __$$_PersonModelCopyWithImpl<$Res>
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
-      hobby: freezed == hobby
+      hobby: null == hobby
           ? _value.hobby
           : hobby // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -123,18 +123,20 @@ class __$$_PersonModelCopyWithImpl<$Res>
 
 class _$_PersonModel implements _PersonModel {
   const _$_PersonModel(
-      {@JsonKey(name: 'name', defaultValue: 'Person') this.name = 'Person',
-      @JsonKey(name: 'age', defaultValue: 15) this.age = 14,
-      this.hobby});
+      {@JsonKey(name: 'name', defaultValue: 'Person')
+          required this.name = 'Person',
+      @JsonKey(name: 'age')
+          required this.age = 14,
+      required this.hobby});
 
   @override
   @JsonKey(name: 'name', defaultValue: 'Person')
   final String name;
   @override
-  @JsonKey(name: 'age', defaultValue: 15)
+  @JsonKey(name: 'age')
   final int age;
   @override
-  final String? hobby;
+  final String hobby;
 
   @override
   String toString() {
@@ -163,18 +165,20 @@ class _$_PersonModel implements _PersonModel {
 
 abstract class _PersonModel implements PersonModel {
   const factory _PersonModel(
-      {@JsonKey(name: 'name', defaultValue: 'Person') final String name,
-      @JsonKey(name: 'age', defaultValue: 15) final int age,
-      final String? hobby}) = _$_PersonModel;
+      {@JsonKey(name: 'name', defaultValue: 'Person')
+          required final String name,
+      @JsonKey(name: 'age')
+          required final int age,
+      required final String hobby}) = _$_PersonModel;
 
   @override
   @JsonKey(name: 'name', defaultValue: 'Person')
   String get name;
   @override
-  @JsonKey(name: 'age', defaultValue: 15)
+  @JsonKey(name: 'age')
   int get age;
   @override
-  String? get hobby;
+  String get hobby;
   @override
   @JsonKey(ignore: true)
   _$$_PersonModelCopyWith<_$_PersonModel> get copyWith =>

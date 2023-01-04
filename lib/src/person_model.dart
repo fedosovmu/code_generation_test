@@ -10,11 +10,11 @@ class PersonModel with _$PersonModel {
   const factory PersonModel({
     @Default('Person')
     @JsonKey(name: 'name', defaultValue: 'Person')
-    String name,
+    required String name,
     @Default(14)
-    @JsonKey(name: 'age', defaultValue: 15)
-    int age,
-    String? hobby,
+    @JsonKey(name: 'age')
+    required int age,
+    required String hobby,
   }) = _PersonModel;
 
 //factory PersonModel.fromJson(Map<String, dynamic> json) =>

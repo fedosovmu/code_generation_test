@@ -6,7 +6,7 @@ part 'model.freezed.dart';
 @freezed
 class TestModel with _$TestModel {
   const factory TestModel({
-    int? value,
+    required int value,
     @Default('Alex')
     @JsonKey(name: 'name', defaultValue: 'Alex')
     String? name,
@@ -14,8 +14,8 @@ class TestModel with _$TestModel {
     int? field1,
     @JsonKey(name: 'fieldm_2', defaultValue: 123)
     int? field2,
-    @JsonKey(name: 'field_4')
-    int? field4,
+    @JsonKey(name: 'field_3')
+    int? field9,
   }) = _TestModel;
 
   //factory TestModel.fromJson(Map<String, dynamic> json) =>
